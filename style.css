@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan&family=Titillium+Web:wght@200;300;400;600;700;900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Titillium Web';
+    scroll-behavior: smooth;
+}
+
+/* Navigation */
+.nav-bar {
+    width: 100%;
+    background: #666;
+    padding: 20px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+}
+
+.logo a {
+    color: #f6f6f6;
+    font-size: 20px;    
+    letter-spacing: 1px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.menu {
+    display: flex;
+    gap: 3rem;
+}
+
+.menu li a {
+    color: #f6f6f6;
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+/* Landpage */
+.parent-container {
+    background: #666;
+    height: 90vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding: 20px 7%;
+}
+
+.child-container-one {
+    background: #666;
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+    padding-left: 7%;
+    padding-top: 7%;
+    user-select: none;
+
+    /* display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr; */
+
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+}
+
+.child-container-one h3 {
+    color: #d1d0d0;
+    font-size: 17px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    
+}
+
+.child-container-one h1 {
+    color: #ffffff;
+    font-size: 40px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.child-container-one h2 {
+    color: #e9e8e8;
+    font-size: 25px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.child-container-one p {
+    color: #d1d0d0;
+    font-size: 15px;
+    text-align: justify;
+    width: 90%;
+    letter-spacing: .5px;
+    margin-bottom: 10px;
+}
+
+.child-container-one .btn-cv {
+    margin-top: 15px;
+    background: #f6f6f6;
+    color: #666;
+    width: 130px;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+    
+.child-container-two {
+    background: #666;
+    grid-column: 3 / 6;
+    grid-row: 1 / 3;
+}
+
+/* Gallery Container */
+.gallery-container {
+    max-width: 100%;
+    min-height: 65vh;
+    background: #f6f6f6;
+    padding: 4% 7%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 1rem;
+}
+
+.gallery-container img {
+    width: 100%;
+}
+
+@media (max-width: 640px) {
+    .menu {
+        display: none;
+    }
+
+    .parent-container {
+        height: 100vh;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .child-container-one h3 {
+        display: none;
+    }
+
+    .child-container-one h1 {
+        font-size: 40px;
+        letter-spacing: 4px;
+        line-height: 1;
+        margin-bottom: 10px;
+    }
+
+    .child-container-one h2 {
+        font-size: 16px;
+        letter-spacing: 1px;
+    }
+
+    .child-container-one p {
+        width: 100%;
+        font-size: 13px;
+        letter-spacing: 0;
+    }
+
+    .child-container-one .btn-cv {
+        margin-top: 30px;
+    }
+}
